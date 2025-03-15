@@ -68,7 +68,7 @@
     { "tag": "🎵 TikTok", "type": "selector", "outbounds": ["SG 新加坡节点", "JP 日本节点", "UM 美国节点", "TW 台湾节点", "KR 韩国节点", "♻️ 自动选择", "🐸 手动切换"] },
     { "tag": "🎥 Netflix", "type": "selector", "outbounds": ["SG 新加坡节点", "HK 香港节点", "UM 美国节点", "TW 台湾节点", "♻️ 自动选择", "🐸 手动切换"] },
     { "tag": "📲 Telegram", "type": "selector", "outbounds": ["SG 新加坡节点", "HK 香港节点", "JP 日本节点", "UM 美国节点", "TW 台湾节点", "KR 韩国节点", "♻️ 自动选择", "🐸 手动切换"] },
-    { "tag": "🚀 节点选择", "type": "selector", "outbounds": ["SG 新加坡节点", "HK 香港节点", "JP 日本节点", "UM 美国节点", "TW 台湾节点", "KR 韩国节点", "♻️ 自动选择", "🐸 手动切换, "🎯 全球直连"] },    
+    { "tag": "🚀 节点选择", "type": "selector", "outbounds": ["SG 新加坡节点", "HK 香港节点", "JP 日本节点", "UM 美国节点", "TW 台湾节点", "KR 韩国节点", "♻️ 自动选择", "🐸 手动切换"] },    
     { "tag": "🍏 Apple", "type": "selector", "outbounds": ["🎯 全球直连","🚀 节点选择", "🐸 手动切换", "♻️ 自动选择"] },
     { "tag": "🪟 Microsoft", "type": "selector", "outbounds": ["🎯 全球直连","🚀 节点选择", "🐸 手动切换", "♻️ 自动选择"] },
     { "tag": "🐬 OneDrive", "type": "selector", "outbounds": ["🎯 全球直连","🚀 节点选择", "🐸 手动切换", "♻️ 自动选择"] },
