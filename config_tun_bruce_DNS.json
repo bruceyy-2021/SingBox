@@ -23,9 +23,17 @@
 
  "dns":   
  {
+   "hijack": {
+      "enabled": true,
+      "tcp": true,
+      "udp": true,
+      "ipv4": true,
+      "ipv6": false,  
+      "port": 53
+    },
    "servers": 
    [
-     {"tag": "dns_direct", "address": "127.0.0.1:5553", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "direct"},
+     {"tag": "dns_direct", "address": "127.0.0.1:5553", "detour": "direct"},
      {"tag": "dns_proxy", "address": "tls://8.8.8.8", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🚀 节点选择"}
    ],
    "rules": 
