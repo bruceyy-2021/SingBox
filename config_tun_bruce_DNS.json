@@ -30,7 +30,7 @@
       "tag": "dns_direct", 
       "server": "127.0.0.1", 
       "server_port": 5553,
-      "address_strategy": "ipv4_only", 
+      "domain_strategy": "ipv4_only", 
       "strategy": "ipv4_only", 
       "detour": "🎯 全球直连"},
      {
@@ -39,7 +39,7 @@
        "server": "8.8.8.8",
        "server_port": 853,
        "tls": {},
-       "address_strategy": "ipv4_only", 
+       "domain_strategy": "ipv4_only", 
        "strategy": "ipv4_only", 
        "detour": "🚀 节点选择"}
    ],
