@@ -23,18 +23,22 @@
 
  "dns":   
  {
-   "hijack": {
-      "enabled": true,
-      "tcp": true,
-      "udp": true,
-      "ipv4": true,
-      "ipv6": false,  
-      "port": 53
-    },
    "servers": 
    [
-     {"tag": "dns_direct", "address": "127.0.0.1:5553", "detour": "direct"},
-     {"tag": "dns_proxy", "address": "tls://8.8.8.8", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🚀 节点选择"}
+     {
+       "type": "tcp",
+       "tag": "dns_direct", 
+       "server": "127.0.0.1",
+       "server_port": "5553",
+       "detour": "🎯 全球直连"},
+     {
+       "type": "tls",
+       "tag": "dns_proxy",
+       "server": "8.8.8.8",
+       "server_port": "853",
+       "address_strategy": "ipv4_only", 
+       "strategy": "ipv4_only",
+       "detour": "🚀 节点选择"}
    ],
    "rules": 
    [
@@ -134,7 +138,6 @@
       { "tag": "geosite-geolocation-!cn", "type": "remote", "format": "binary", "url": "https://github.yybruce.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://github.yybruce.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-private", "type": "remote", "format": "binary", "url": "https://github.yybruce.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs", "download_detour": "🎯 全球直连" },
-            
       { "tag": "geoip-google", "type": "remote", "format": "binary", "url": "https://github.yybruce.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geoip-telegram", "type": "remote", "format": "binary", "url": "https://github.yybruce.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs", "download_detour": "🎯 全球直连" },     
       { "tag": "geoip-netflix", "type": "remote", "format": "binary", "url": "https://github.yybruce.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs", "download_detour": "🎯 全球直连" },     
