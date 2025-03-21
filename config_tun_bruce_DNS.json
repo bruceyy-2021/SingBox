@@ -26,9 +26,22 @@
    "servers": 
    [
      {
-      "tag": "dns_direct", "address": "tcp://127.0.0.1:5553", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🎯 全球直连"},
+      "type": "tcp",
+      "tag": "dns_direct", 
+      "server": "127.0.0.1", 
+      "server_port": 5553,
+      "address_strategy": "ipv4_only", 
+      "strategy": "ipv4_only", 
+      "detour": "🎯 全球直连"},
      {
-       "tag": "dns_proxy", "address": "tls://8.8.8.8", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🚀 节点选择"}
+       "type": "tls",
+       "tag": "dns_proxy",
+       "server": "8.8.8.8",
+       "server_port": 853,
+       "tls": {},
+       "address_strategy": "ipv4_only", 
+       "strategy": "ipv4_only", 
+       "detour": "🚀 节点选择"}
    ],
    "rules": 
    [
