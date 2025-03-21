@@ -26,13 +26,11 @@
    "servers": 
    [
      {
-       "type": "tcp",
        "tag": "dns_direct", 
        "server": "127.0.0.1",
        "server_port": "5553",
        "detour": "🎯 全球直连"},
      {
-       "type": "tls",
        "tag": "dns_proxy",
        "server": "8.8.8.8",
        "server_port": "853",
