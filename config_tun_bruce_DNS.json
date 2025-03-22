@@ -21,20 +21,19 @@
     }
   },
 
- "dns":   
+ "dns": 
  {
    "servers": 
    [
-     {"tag": "dns_direct", "address": "192.168.8.2:5553"},
-     {"tag": "dns_proxy", "address": "8.8.8.8"}
-     
+     {"tag": "dns_direct", "address": "192.168.8.2:5553", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🎯 全球直连"},
+     {"tag": "dns_proxy", "address": "tls://8.8.8.8", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🚀 节点选择"}
    ],
    "rules": 
    [
      {"outbound": "any", "server": "dns_direct", "disable_cache": true},
      {"clash_mode": "Direct", "server": "dns_direct"},
      {"clash_mode": "Global", "server": "dns_proxy"},
-     {"rule_set": "geosite-cn","server": "dns_direct"},
+     {"rule_set": "geosite-cn", "action": "route","server": "dns_direct"},
      {"rule_set": "geosite-geolocation-!cn", "server": "dns_proxy"}
    ],
    "final": "dns_proxy",
